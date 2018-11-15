@@ -1,0 +1,79 @@
+{
+  "_from": "git+https://github.com/apache/cordova-plugin-media.git",
+  "_id": "cordova-plugin-media@5.0.3-dev",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-media",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/apache/cordova-plugin-media.git",
+    "rawSpec": "https://github.com/apache/cordova-plugin-media.git",
+    "saveSpec": "git+https://github.com/apache/cordova-plugin-media.git",
+    "fetchSpec": "https://github.com/apache/cordova-plugin-media.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/apache/cordova-plugin-media.git#a006da37a692668006347b10cb0b3a1298380bc4",
+  "_spec": "https://github.com/apache/cordova-plugin-media.git",
+  "_where": "C:\\Users\\Dell\\Documents\\NetBeansProjects\\alertaTuPiel",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://issues.apache.org/jira/browse/CB"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-media",
+    "platforms": [
+      "android",
+      "browser",
+      "ios",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Media Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova-android": ">=6.1.0"
+      },
+      "4.0.0": {
+        "cordova-android": ">=6.3.0"
+      },
+      "6.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-media#readme",
+  "keywords": [
+    "cordova",
+    "media",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-browser",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-media",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-media.git"
+  },
+  "scripts": {
+    "jshint": "jshint www && jshint src && jshint tests",
+    "test": "npm run jshint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "5.0.3-dev"
+}

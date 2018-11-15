@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ALERTA TU PIEL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+        <link href="css/styles01.css" rel="stylesheet" type="text/css"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700i" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700" rel="stylesheet"> 
+
+
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+        <script src="js/jquery.dstk.js" type="text/javascript"></script>
+
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/datepicker-es.js"></script>
+        <script src="js/jquery.LoadingBox.js"></script>
+
+        <script src="cordova.js"></script>
+    </head>
+
+    <body>
+
+
+
+
+        <div class="container" id="mainPanel">
+
+            <div id="mainTitle"><span><img src="images/icon-alertaTuPiel.png" alt=""/></span>Alerta<span>Tu</span>Piel</div>
+
+
+            <div class="col-xs-6 col-sm-6 col-md-6 text-right temp" style="word-wrap: break-word;">
+
+                <span id="temp"></span>&deg;C
+                <img id="iconWeather"  >
+                <!--                <span id="weather"></span>-->
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6" id="cityInfo">
+                <span id="cityName"></span>
+                <div ><span id="dateApp"></span> </div>
+            </div>
+
+            <div id="infoApp" class="container" >
+                <div class="col-xs-12 col-sm-12 col-md-12" >
+                    <figure id="infoVivo">
+                        <div class="col-md-12 labelSmall  text-center" id="labelUV">UV Actual</div>
+                        <h1 id="uvVivo" class=" text-center"></h1>
+                        <h4 class="text-center" id="uvTitle" ></h4>
+                    </figure>
+                </div>
+
+
+
+                <div class="col-xs-12 col-sm-12 col-md-12" >
+                    <div class="col-md-12 labelSmall text-center" id="labelMaxUV">UV Máximo en el día <br><span id="timeMaxUV"></span></div>
+                    <h1 id="uvMax"></h1>
+                    <h5 class="col-xs-12 col-sm-12 col-md-12 text-center" id="uvMaxTitle" ></h5>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container" id="opciones">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center" id="publicidad" style="background-color: #aaa; min-height: 50px; padding: 10px; margin: 0 auto; font-size: 10px;" >
+                Publicidad</div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 text-center" id="citySelect"><h4>Ciudad</h4>
+                <i class="glyphicon glyphicon-map-marker"></i>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 text-center" id="dateUV"><h4>Fecha</h4>
+                <i class="glyphicon glyphicon-calendar"></i>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 text-center" id="advicesButton"><h4>Consejos</h4>
+                <i class="glyphicon glyphicon-education"></i>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 text-center" id="infoButton"><h4>Acerca</h4>
+                <i class="glyphicon glyphicon-info-sign"></i>
+            </div>
+
+
+
+        </div>
+
+        <input id="altValue" type="text" value="333" style="background-color: #333;"><br>
+        <input id="latValue" type="text" value="0" style="background-color: #333;">
+        <input id="longValue" type="text" value="0" style="background-color: #333;"><br>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center highlight bottomPanel" id="Cities" >
+            <ul>
+                <li latit="-0.22985" longit="-78.5249481">Quito</li>
+                <li latit="-2.1961601" longit="-79.8862076">Guayaquil</li>
+                <li latit="-2.9005499" longit="-79.0045319">Cuenca</li>
+                <li latit="-0.25305" longit="-79.1753616">Santo Domingo</li>
+                <li latit="-1.2490799" longit="-78.6167526">Ambato</li>
+                <li latit="-3.25861" longit="-79.9605331">Machala</li>
+                <li latit="-0.96212" longit="-80.7127075">Manta</li>
+                <li latit="-1.05458" longit="-80.4544525">Portoviejo</li>
+                <!--                <li latit="-2.1757901" longit="-79.8551865">Eloy Alfaro</li>-->
+                <li latit="0.9592" longit="-79.6539688">Esmeraldas</li>
+                <li latit="-1.2490799" longit="-78.6167526">Ambato</li>
+                <!--                <li latit="-0.19727" longit="-78.4974976">Tutamandahostel</li>-->
+                <li latit="-2.1340401" longit="-79.5941467">Milagro</li>
+                <li latit="0.35171" longit="-78.1223297">Ibarra</li>
+                <li latit="-1.67098" longit="-78.6471176">Riobamba</li>
+                <li latit="-1.02863" longit="-79.4635162">Quevedo</li>
+                <li latit="-3.99313" longit="-79.2042236">Loja</li>
+                <li latit="0.81187" longit="-77.7172699">Tulcán</li>
+                <li latit="-1.80217" longit="-79.5344315">Babahoyo</li>
+                <!--                <li latit="-2.233" longit="-80.9103928">La Libertad</li>-->
+                <li latit="-0.93521" longit="-78.6155396">Latacunga</li>
+                <!--                <li latit="-1.0437599" longit="-79.6383667">Velasco Ibarra</li>-->
+            </ul>
+        </div>
+
+        <div id="datepickerDiv" class="bottomPanel"></div>
+        <div class="row highlight bottomPanel" id="Advices" >
+            <div>
+                <h3>¿Qué medidas sencillas pueden tomarse para protegerse del sol?</h3>
+
+                <p>La sombra, las gafas de sol, las prendas de vestir y los sombreros son la mejor protección. 
+                    Además, es necesario aplicarse una crema con filtro solar en las partes del cuerpo que quedan al descubierto, 
+                    como el rostro y las manos. Nunca debe utilizarse la crema con filtro solar para prolongar la exposición al sol.
+                </p>
+                <p>
+                    Evitar la exposición solar en las horas centrales del día. Los rayos UV solares son más fuertes entre 
+                    las 10 de la mañana y las 4 de la tarde. Tenga especial cuidado con la exposición al sol durante esas horas.                
+                    Tenga en cuenta el índice UV. Este importante dato le ayuda a planificar sus actividades al aire libre para evitar
+                    una exposición excesiva a los rayos del sol. Es necesaria protección solar siempre que el índice UV prevea niveles
+                    de exposición de moderados a altos, por ejemplo un índice UV de 3 o superior.
+                </p>                
+                <p>
+                    Aproveche las sombras. Póngase a la sombra cuando los rayos UV sean más intensos, pero no olvide que los árboles, 
+                    las sombrillas o los toldos no protegen totalmente contra la radiación solar.
+                </p>                
+                <p>                
+                    Use ropas que le protejan. Un sombrero de ala ancha protege debidamente los ojos, las orejas, la cara y la parte
+                    posterior del cuello. Las gafas de sol con un índice de protección del 99%-100% frente a los rayos UVA y UVB 
+                    reducen considerablemente los daños oculares debidos a la radiación solar. Las prendas de vestir holgadas y de 
+                    tejido tupido que cubran la mayor superficie corporal posible también protegen contra el sol.
+                </p>                
+                <p>                
+                    Utilice cremas con filtro solar. Aplíquese una crema protectora de amplio espectro, con factor de protección igual 
+                    o superior a 30. Extiéndala generosamente sobre la piel expuesta y repita la aplicación cada dos horas, o después 
+                    de trabajar, nadar, jugar o hacer ejercicio al aire libre.
+                </p>                
+                <p>                
+                    Evite las lámparas y las camas bronceadoras. Las lámparas y las camas bronceadoras aumentan el riesgo de cáncer de 
+                    la piel y pueden dañar los ojos si no se usa protección. Debe evitarse completamente su uso.
+                </p>                
+                <p>                    
+                    Proteja a los niños. Los niños suelen ser más vulnerables a los riesgos ambientales que los adultos. Cuando estén 
+                    al aire libre, hay que protegerlos de la exposición a los rayos UV como ya se ha explicado. Los bebés deben 
+                    permanecer siempre a la sombra
+                </p>                
+                <p class="fuente">
+                    Fuente: Organización Mundial de la Salud 
+                    (<a href="http://www.who.int/features/qa/40/es/" target="_blank">http://www.who.int/features/qa/40/es/)</a>;
+                </p>
+            </div>
+        </div>
+
+        <div class="row highlight bottomPanel" id="Info" >
+            <div>
+
+                <h3>Info de AlertaTuPiel</h3>
+
+                <p>Esta app es para uso personal. Est&aacute; pensada para la salud y el cuidado de la piel contra los rayos UV. Toda la
+                    informaci&oa&oacute;n es referencial y aproximada. 
+                </p>
+                <div>
+                    <h4>Niveles-Colores UV</h4>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nivel UV</th>
+                                <th>Rango UV</th>
+                                <th>Color UV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bajo</td>
+                                <td><code>[0-3)</code></td>
+                                <td><div class="block">
+                                        <div class="uvcolor low"></div>
+                                    </div>
+                                    <div class="block"></div>
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td>Moderado</td>
+                                <td><code>[3-6)</code></td>
+                                <td><div class="block">
+                                        <div class="uvcolor mod"></div>
+                                    </div>
+                                    <div class="block"></div>
+                            </tr>
+                            <tr>
+                                <td>Alto</td>
+                                <td><code>[6-8)</code></td>
+                                <td><div class="block">
+                                        <div class="uvcolor high"></div>
+                                    </div>
+                                    <div class="block"></div>
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td>Muy Alto</td>
+                                <td><code>[8-11)</code></td>
+                                <td><div class="block">
+                                        <div class="uvcolor vhigh"></div>
+                                    </div>
+                                    <div class="block"></div>
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td>Extremo</td>
+                                <td><code>[11+...)</code></td>
+                                <td><div class="block">
+                                        <div class="uvcolor extr"></div>
+                                    </div>
+                                    <div class="block"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+                <h4>Aviso</h4>
+                <p>                    
+                    AlertaTuPiel no se hace resposable por la infromaci&oacute;n mostratda ni su uso.
+                </p>                
+                <p>                
+                    Para m&aacute;s informaci&oacute;n env&iacute;nos un email <a href="mailto:info@mushoq.com" >aqu&iacute;</a>    .
+                </p>
+            </div>
+        </div>
+
+
+        <script src="js/index.js" type="text/javascript"></script>
+
+    </body>
+
+</html>

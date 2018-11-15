@@ -1,0 +1,278 @@
+/* 
+    Created on : Oct 23, 2018, 2:48:27 PM
+    Author     : Luis Landazuri
+    Project    : AlertaTuPiel
+*/
+html {
+    height: 100%;
+}
+body {
+    color: #FFF;
+    height: 100%;                
+    background: #333 no-repeat; 
+    background-image: url(../images/sun.png);
+    background-position: -20% 100%;
+}
+
+#mainTitle {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin: 2px 0 8px;
+}
+#mainTitle span {
+    color: #dddddd;
+    font-weight: 700;
+    font-style: italic;
+}
+#mainTitle img {
+    max-height: 20px;
+    margin: -3px 4px 0 0;
+}
+#uvMax {
+    font-family: 'Exo 2', Lato, sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    color: #FFF;                
+    text-align: center;
+    margin: 0 0 8px;
+    line-height: 55px;
+}
+#uvMax span {
+    font-size: 60px;
+}
+
+#uvTitle {
+    font-size: 21px;
+    margin-bottom: 10px;
+    margin-top: -13px;
+}
+
+#labelMaxUV {
+    margin-top: 4px;
+}
+
+.labelSmall {
+    font-size: 11px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+#uvVivo {
+    font-family: 'Exo 2', Lato, sans-serif;
+    font-size: 75px;
+    line-height: 90px;
+    margin-top: 0;
+    letter-spacing: -0.05em;
+}
+
+#opciones {
+    background: #305989;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+}
+#opciones > div{
+    margin: 0px auto;
+    min-height: 18vh;
+    font-weight: bold;
+    padding: 10px 0;
+}
+#opciones > div h4{
+    font-size: 12px;
+}
+#opciones div:nth-child(2) {
+    background: #2D5481;
+}
+#opciones div:nth-child(3) {
+    background: #294C75;
+}
+#opciones div:nth-child(4) {
+    background: #25456A;
+}
+#opciones > div i {
+    font-size: 30px;
+}
+
+#weather {
+    text-transform: capitalize; 
+}
+#iconWeather {
+    max-height: 60px;
+    margin-top: -16px;
+}
+.temp {
+    font-family: 'Exo 2', Lato, sans-serif;
+    font-size: 24px;
+    padding: 0 2px;
+}
+
+#dateApp {
+    letter-spacing: -0.02em;
+}
+#datepickerDiv {
+    display: none;
+    position: absolute;
+    bottom: 18.1vh;
+    left: 50%;
+    margin-left: -129px;
+
+}
+.ui-datepicker-month {
+    text-transform: capitalize;
+}
+.ui-state-default {
+    font-family: 'Exo 2', Lato, sans-serif;
+    font-weight: 400;
+    text-align: center !important;
+}
+
+#Cities {
+    display: none;
+    position: absolute;
+    bottom: 18.1vh;
+    left: 5%;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 89%;
+    padding: 0 10px;
+    opacity: 0.92;
+}
+#Cities ul { 
+    padding-left: 0;
+}
+#Cities ul li {
+    color: #25456A;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    font-weight: bold;
+    width: 50%;
+    float: left;
+}
+#infoVivo {
+    display: none;
+    color: #333;
+    width: 160px;
+    height: 160px;
+    background-color: #FFF;
+    margin: 8px auto;
+    border-radius: 90px;
+    border: 2px solid #333;
+}
+figure .labelSmall {
+    padding-top: 10px;
+}
+#cityInfo {
+    font-family: 'Exo 2', Lato, sans-serif;
+    padding: 0 2px;
+    max-height: 34px;
+    overflow: hidden;
+}
+#cityInfo div {
+    margin-top: -2px;
+}
+input {
+    display: none;
+}
+#infoApp {
+    margin-top: 25%;
+}
+#uvMaxTitle {
+    margin-top: -6px;
+}
+
+#Advices, #Info {
+    display: none;
+    position: absolute;
+    bottom: 18.1vh;
+    background-color: #fff;
+    color: #222;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    font-weight: bold;
+    width: 98%;
+    left:5%;
+    float: left;
+    border-radius: 8px 8px 0 0;
+
+}
+#Advices > div, #Info > div {
+    height: 70vh;
+    overflow-y: scroll;
+}
+.glyphicon {
+    border: 1px solid #FFF;
+    padding: 8px;
+    text-align: center;
+    border-radius: 26px;
+    font-size: 19px !important;            
+}
+
+#mainPanel {
+
+}
+.bottomPanel h3{
+    color: #25456A;     
+    font-size: 20px;
+    text-align: center;
+}
+.bottomPanel p {
+    font-weight: normal;
+    padding: 12px;
+}
+
+.fuente {
+    color: #25456A;
+    font-size: 11px;
+    font-style: italic;
+}
+.uvcolor {
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+    border: 1px solid rgba(0, 0, 0, .2);
+
+}
+
+.low {
+    background: #558B2F;
+}
+
+.mod {
+    background: #F9A825;
+}
+
+.high {
+    background: #EF6C00;
+}
+
+.vhigh {
+    background: #B71C1C;
+}
+
+.extr {
+    background: #6A1B9A;
+}
+
+#Info .block {
+    float: left;
+}
+#Info code {
+    float: left;
+    padding-top: 6px;
+}
+#infoApp h4 {
+    text-align: center;
+}
+
+.ui-datepicker table {
+    font-size: 1.31em;
+}
+

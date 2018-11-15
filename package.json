@@ -1,0 +1,63 @@
+{
+    "name": "com.coolappz.alertatupiel",
+    "displayName": "alertaTuPiel",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^7.1.1",
+        "cordova-plugin-battery-status": "git+https://github.com/apache/cordova-plugin-battery-status.git",
+        "cordova-plugin-camera": "git+https://github.com/apache/cordova-plugin-camera.git",
+        "cordova-plugin-console": "git+https://github.com/apache/cordova-plugin-console.git",
+        "cordova-plugin-contacts": "git+https://github.com/apache/cordova-plugin-contacts.git",
+        "cordova-plugin-device": "git+https://github.com/apache/cordova-plugin-device.git",
+        "cordova-plugin-device-motion": "git+https://github.com/apache/cordova-plugin-device-motion.git",
+        "cordova-plugin-device-orientation": "git+https://github.com/apache/cordova-plugin-device-orientation.git",
+        "cordova-plugin-dialogs": "git+https://github.com/apache/cordova-plugin-dialogs.git",
+        "cordova-plugin-file": "git+https://github.com/apache/cordova-plugin-file.git",
+        "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
+        "cordova-plugin-geolocation": "git+https://github.com/apache/cordova-plugin-geolocation.git",
+        "cordova-plugin-globalization": "git+https://github.com/apache/cordova-plugin-globalization.git",
+        "cordova-plugin-media": "git+https://github.com/apache/cordova-plugin-media.git",
+        "cordova-plugin-media-capture": "git+https://github.com/apache/cordova-plugin-media-capture.git",
+        "cordova-plugin-network-information": "git+https://github.com/apache/cordova-plugin-network-information.git",
+        "cordova-plugin-splashscreen": "git+https://github.com/apache/cordova-plugin-splashscreen.git",
+        "cordova-plugin-statusbar": "^2.4.2",
+        "cordova-plugin-vibration": "git+https://github.com/apache/cordova-plugin-vibration.git",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "openuv": "^0.1.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-dialogs": {},
+            "cordova-plugin-globalization": {},
+            "cordova-plugin-media": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-media-capture": {},
+            "cordova-plugin-device-orientation": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-battery-status": {},
+            "cordova-plugin-camera": {
+                "ANDROID_SUPPORT_V4_VERSION": "27.+"
+            },
+            "cordova-plugin-contacts": {},
+            "cordova-plugin-device-motion": {},
+            "cordova-plugin-geolocation": {},
+            "cordova-plugin-vibration": {},
+            "cordova-plugin-network-information": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-statusbar": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}
